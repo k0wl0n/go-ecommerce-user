@@ -1,17 +1,21 @@
 # create ECR repository
-aws ecr create-repository --repository-name ecommerce_user --region ap-southeast-1
+aws ecr create-repository --repository-name go-ecommerce-user --region ap-southeast-1
 
 
 # setup repository variable on github Actions secrets and variables
 
 https://github.com/<username>>/<app-name>/settings/secrets/actions
 
+contoh:
+https://github.com/k0wl0n/go-ecommerce-user/settings/secrets/actions
 
-AWS_ACCESS_KEY_ID = value ( ERC push IAM)
+
+
+AWS_ACCESS_KEY_ID = value ( ECR push IAM)
 AWS_REGION = value
-AWS_SECRET_ACCESS_KEY = value ( ERC push IAM)
-REPO_NAME = <app-name>
-REPO_TOKEN = <monorepo-gitops-repo-token>
+AWS_SECRET_ACCESS_KEY = value ( ECR push IAM)
+REPO_NAME = 
+REPO_TOKEN =
 
 # setup deploy keys
 https://github.com/<username>>/<app-name>/settings/keys

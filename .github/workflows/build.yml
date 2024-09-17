@@ -65,7 +65,7 @@
             source-directory: 'deploy'
             target-directory: 'overlay/${{ env.ENVIRONMENT }}/${{ secrets.REPO_NAME }}'
             destination-github-username: 'k0wl0n'
-            destination-repository-name: 'monorepo-echo-application'
+            destination-repository-name: 'ecommerce-manifest'
             user-email: wahyuanggana1@gmail.com
             target-branch: main
 
