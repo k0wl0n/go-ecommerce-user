@@ -7,10 +7,10 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
-	log "github.com/sirupsen/logrus"
 	"github.com/k0wl0n/go-ecommerce-user/internal/database"
 	"github.com/k0wl0n/go-ecommerce-user/utils"
 	"github.com/k0wl0n/go-ecommerce-user/validators"
+	log "github.com/sirupsen/logrus"
 )
 
 // SignUp API
@@ -130,10 +130,10 @@ func (apiCfg *APIConfig) Login(c *gin.Context) {
 	// Check the given password with hashed password stored in DB
 	match, err := utils.CheckPassowrdValid(params.Password, user.Password)
 	if err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"message": "Invalid password"})
+		c.JSON(http.StatusBadRequest, gin.H{"message": "Invalid password !"})
 		return
 	} else if !match {
-		c.JSON(http.StatusBadRequest, gin.H{"message": "Invalid password"})
+		c.JSON(http.StatusBadRequest, gin.H{"message": "Invalid password !"})
 		return
 	}
 
